@@ -7215,7 +7215,7 @@ textarea.form-control-lg {
 
 .border-white {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-gray), var(--bs-border-opacity)) !important;
 }
 
 .border-1 {
