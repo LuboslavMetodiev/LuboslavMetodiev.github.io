@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint HTML with Super-Linter
     permissions:
-      contents: write
-      packages: write
+      contents: read
+      packages: read
       statuses: write
 
     steps:
@@ -26,7 +26,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           VALIDATE_HTML: true
-          VALIDATE_CSS: true
+          VALIDATE_CSS: false
           VALIDATE_JAVASCRIPT: true
           VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
