@@ -16,7 +16,7 @@ jobs:
       contents: read
       packages: read
       statuses: write
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,12 +24,13 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
+          DEFAULT_BRANCH: main
           VALIDATE_HTML: true
           VALIDATE_CSS: true
           VALIDATE_JAVASCRIPT: true
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEFAULT_BRANCH: main
+          
   
   linchee-links:
     name: Check links with linchee
