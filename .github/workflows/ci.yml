@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint HTML with Super-Linter
     permissions:
-      contents: read
-      packages: read
+      contents: write
+      packages: write
       statuses: write
 
     steps:
