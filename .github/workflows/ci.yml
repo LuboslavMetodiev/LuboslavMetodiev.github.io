@@ -12,6 +12,11 @@ jobs:
   super-linter:
     runs-on: ubuntu-latest
     name: Lint HTML with Super-Linter
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
